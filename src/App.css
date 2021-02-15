@@ -1,38 +1,205 @@
 .App {
+  background-color: rgb(250,250,250);
   text-align: center;
+  display: grid;
+  grid-template-rows: 10vh 55vh 35vh 5vh;
+  grid-template-columns: 25vw 25vw 25vw 23.7vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#top-banner {
+  grid-row: 1/2;
+  grid-column: 1/5;
+  background-color: rgb(237, 238, 236);
+  box-shadow: 0px 3px 3px rgb(150, 150, 150);
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#top-banner-title {
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1.2;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
+}
+
+#top-banner-nav-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+#top-banner-button {
+  width: 20%;
+  margin-left: 5px;
+  padding: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  outline: none;
+  font-size: 15px;
+  color:rgb(120, 120, 120);
+}
+
+#top-banner-button:hover {
+  border-bottom: solid 2px blue;
+  color:black;
+
+  cursor: pointer;
+}
+
+#top-banner-search {
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  width: 35%;
+  font-size: 12px;
+  line-height: 1.2;
+  display: flex;
+}
+
+#dropdown {
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: 10vh;
+  font-size: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  line-height: 8vh;
+}
+
+#top-banner-button:hover #dropdown {
+  display: block;
+}
+
+#dropdown-content {
+  width: 16vw;
+}
+
+#dropdown-content:hover {
+  background-color: dodgerblue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=text] {
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+  border: solid 1px rgb(200, 200, 200);
+  border-radius: 15px;
+  outline: none;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=text]:focus {
+  box-shadow: -1px -1px 4px rgb(170, 170, 170) inset;
+}
+
+#challenge-window {
+  background-color: white;
+   grid-row: 2/3;
+   grid-column: 1/2;
+
+   margin: 10px;
+   border: solid 2px black;
+   border-radius: 5px;
+   box-shadow: 3px 3px 3px rgb(150, 150, 150);
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+#card-display {
+  margin: 6px;
+  background-color: rgb(237, 238, 236);
+  word-wrap: wrap;
+
+   border: solid 1px rgb(200, 200, 200);
+   border-radius: 3px;
+}
+
+#card-control-panel {
+  margin: 2px;
+  padding: 1px;
+  background-color: rgb(237, 238, 236);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  border: solid 1px rgb(200, 200, 200);
+  border-radius: 3px;
+}
+
+#card-control-panel-button {
+  margin: 2px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: rgb(237, 238, 236);
+  border-left: solid 1px rgb(150, 150, 150);
+  border-radius: 2px;
+  outline: none;
+}
+
+#card-control-panel-button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#card-control-panel-button:active {
+  background-color: rgb(170, 170, 170);
+}
+
+#submission-form {
+  background-color: white;
+   grid-row: 3/4;
+   grid-column: 1/2;
+   margin: 10px;
+   border: solid 2px black;
+   border-radius: 5px;
+   box-shadow: 3px 3px 3px rgb(150, 150, 150);
+}
+
+input [type=password] {
+  width: 100%;
+}
+
+#claim-bounty {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(237, 238, 236);
+  border-left: solid 1px rgb(150, 150, 150);
+  border-radius: 2px;
+  outline: none;
+}
+
+#claim-bounty:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#claim-bounty:active {
+  background-color: rgb(170, 170, 170);
+}
+
+#workspace {
+  background-color: white;
+   grid-row: 2/4;
+   grid-column: 2/5;
+   margin: 10px;
+   border: solid 2px black;
+   border-radius: 5px;
+   box-shadow: 3px 3px 3px rgb(150, 150, 150);
+}
+
+#bottom-banner {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  background-color: dodgerblue;
+  color: white;
 }

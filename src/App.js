@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import SubmissionForm from './Components/SubmissionForm.js';
+import PageTitle from './Components/PageTitle.js';
+import SearchBar from './Components/SearchBar.js';
+import Workspace from './Components/Workspace.js';
+import CardDisplay from './Components/CardDisplay.js';
+import ControlPanel from './Components/ControlPanel.js';
+import NavBar from './Components/NavBar.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="top-banner">
+      <PageTitle />
+      <SearchBar />
+      <NavBar />
+    </div>
+    <div id="challenge-window">
+      <CardDisplay/>
+      <ControlPanel />
+    </div>
+    <div id="submission-form">
+      <SubmissionForm />
+    </div>
+    <div id="workspace">
+      <Workspace />
+    </div>
+    <div id="bottom-banner">
+      DONATE - CONTACT - CONNECT
+    </div>
     </div>
   );
 }
